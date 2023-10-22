@@ -1,0 +1,22 @@
+# 메모리 초과..
+import sys
+import heapq
+
+n = int(input())  # 1 ≤ N ≤ 1,500
+heap = []
+
+for _ in range(n):
+    a = list(map(int, sys.stdin.readline().split()))
+    for i in a:
+        if len(heap) == n:  # 이미 heap의 크기가 n이면
+            smallest = heapq.heappop(heap)  # heap은 오름차순 정렬
+            if smallest < i:  # 새로운 값이 smallest보다 크면 heap에 저장
+                heapq.heappush(heap, i)
+            else:  # 아니면 다시 smallest를 heap에 저장
+                heapq.heappush(heap, smallest)
+        else:
+            heapq.heappush(heap, i)
+
+print(heap[0])
+
+
