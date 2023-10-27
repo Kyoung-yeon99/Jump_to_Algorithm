@@ -1,30 +1,46 @@
-# 시간 초과
 import sys
 
 n = int(sys.stdin.readline())
 arrA = list(map(int, sys.stdin.readline().split()))
 arrB = list(map(int, sys.stdin.readline().split()))
+flag = False
 
-for last in range(n-1, 1, -1):
+if arrA == arrB:
     flag = True
-    max_idx = 0
-    for i in range(1, last+1):
-        if arrA[i] > arrA[max_idx]:
-            max_idx = i
-
-    if last != max_idx:
-        temp = arrA[max_idx]
-        arrA[max_idx] = arrA[last]
-        arrA[last] = temp
-
-    for i in range(n):
-        if arrA[i] != arrB[i]:
-            flag = False
+else:
+    for i in range(n-1, 0, -1):
+        max_idx = arrA.index(max(arrA[:i+1]))
+        if max_idx != i:
+            arrA[max_idx], arrA[i] = arrA[i], arrA[max_idx]
+        if arrA == arrB:
+            flag = True
             break
-
-    if flag is True:
-        print(1)
-        break
-    
-if flag is False:
+if flag:
+    print(1)
+else:
     print(0)
+
+
+# 시간 초과
+# import sys
+
+# n = int(sys.stdin.readline())
+# arrA = list(map(int, sys.stdin.readline().split()))
+# arrB = list(map(int, sys.stdin.readline().split()))
+# flag = False
+
+# for last in range(n-1, 0, -1):
+#     max_idx = last
+#     if arrA == arrB:
+#         flag = True
+#         break
+#     for j in range(last):
+#         if arrA[max_idx] < arrA[j]:
+#             max_idx = j
+#     if last != max_idx:
+#         arrA[last], arrA[max_idx] = arrA[max_idx], arrA[last]
+    
+# if flag:
+#     print(1)
+# else:
+#     print(0)

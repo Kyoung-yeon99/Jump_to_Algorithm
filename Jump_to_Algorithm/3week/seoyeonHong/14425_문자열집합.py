@@ -6,11 +6,11 @@ class Node:
         self.left = None
         self.right = None
 
-class Tree:
+class Tree: # 이진 탐색 트리
     def __init__(self):
         self.root = None
 
-    def insert(self, value):
+    def insert(self, value): # 삽입
         node = Node(value)
         if self.root is None:
             self.root = node
@@ -29,7 +29,7 @@ class Tree:
             else:
                 pNode.right = node
 
-    def searchNode(self, value):
+    def searchNode(self, value): # 검색
         pNode = self.root
         while pNode is not None:
             if value < pNode.value:
