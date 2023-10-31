@@ -32,9 +32,10 @@
 - 발표자: 다영(10/24)
 ## 4주차-재귀함수와 분할정복
 - https://www.acmicpc.net/group/workbook/view/19038/63362
-발표자: 선경(10/31)
+- 발표자: 선경(11/7)
 ## 5주차-DP
-발표자: 은비(11/7)
+- https://www.acmicpc.net/group/workbook/view/19038/63528
+- 발표자: 은비(11/7)
 ## 6주차-그래프 및 DFS와 BFS
 발표자: 은비(11/14)
 ## 7주차-DFS와 BFS 응용 및 다익스트라
