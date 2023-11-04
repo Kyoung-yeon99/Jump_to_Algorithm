@@ -3,7 +3,6 @@ import sys
 n, m = map(int, sys.stdin.readline().split())
 
 numList = [i for i in range(1, n+1)] # 1부터 n까지의 자연수
-usedList = [False] * (n+1)
 numSets = []
 
 def combination(numList, sequence, count, len):
