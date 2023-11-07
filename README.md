@@ -37,6 +37,7 @@
 - https://www.acmicpc.net/group/workbook/view/19038/63528
 - 발표자: 은비(11/7)
 ## 6주차-그래프 및 DFS와 BFS
+- https://www.acmicpc.net/group/workbook/view/19038/63717
 발표자: 은비(11/14)
 ## 7주차-DFS와 BFS 응용 및 다익스트라
 발표자: 경연(11/21)
