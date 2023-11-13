@@ -22,6 +22,7 @@ def minTime(i, time, blist): # 최소 시간 구하는 함수
         times[i] = time + max_time
         return time + max_time # 가장 오래 걸리는 시간 더하기
 
+
 for i in range(n):
     if times[i] == 0:
         minTime(i, buildings[i][0], buildings[i][1:])
