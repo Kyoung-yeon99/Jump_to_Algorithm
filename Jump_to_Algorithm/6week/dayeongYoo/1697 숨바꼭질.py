@@ -7,18 +7,22 @@ graph = [0] * 100001
 
 
 def bfs():
-    q = deque()
-    q.append(n)
+    q = deque()  # 큐 생성
+    q.append(n)  # 수빈이의 위치를 삽입(첫번째 요소)
+
     while q:
-        curr_v = q.popleft()
+        curr_v = q.popleft()  # 현재 위치
 
         if curr_v == k:  # 현재 노드가 동생이 있는 위치라면
             print(graph[curr_v])
+            break # 탈출
 
-        for i in curr_v - 1, curr_v + 1, curr_v * 2:
-            if 0 <= i <= 100000 and not graph[i]:  # 방문 하지 않았고, 범위 안의 수라면
-                graph[i] = graph[curr_v] + 1
-                q.append(i)
+        for nx in curr_v - 1, curr_v + 1, curr_v * 2:  # 다음 노드 탐색(걷거나+-1, 순간이동 *2)
+            # 다음 노드가 방문 하지 않았고, 범위 안의 수라면
+            if 0 <= nx <= 100000 and not graph[nx]:
+                # 최단 거리 갱신(방문 체크)
+                graph[nx] = graph[curr_v] + 1
+                q.append(nx)
 
 
 bfs()
