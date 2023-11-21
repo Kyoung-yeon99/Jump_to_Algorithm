@@ -43,7 +43,8 @@
 - https://www.acmicpc.net/group/workbook/view/19038/63863
 - 발표자: 경연(11/21)
 ## 8주차-그리디 알고리즘
-발표자: 선경(11/28)
+- https://www.acmicpc.net/group/workbook/view/19038/64045
+- 발표자: 선경(11/28)
 ## 9주차-탐색(이진/완전)
 발표자: 서연(12/5)
 ## 10주차-실전 문제 풀이-구현(1~4)
