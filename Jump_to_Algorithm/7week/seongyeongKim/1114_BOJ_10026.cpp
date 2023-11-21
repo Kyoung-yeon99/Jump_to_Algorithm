@@ -11,8 +11,8 @@ int normal() {
 	bool visited[100][100] = { false, };
 
 	queue <pair<int, int>> q;
-	//for¹®À¸·Î ÀüÃ¼ Å½»ö ÁøÇàÇØ¾ß µÇ´Â ÄÚµå Â¥±â
-	//dfs Å½»öÀÌ ³¡³ª¸é ´ÙÀ½Ä­ ÁøÇàÇØ¾ß ÇÏ´Ï±î
+	//forë¬¸ìœ¼ë¡œ ì „ì²´ íƒìƒ‰ ì§„í–‰í•´ì•¼ ë˜ëŠ” ì½”ë“œ ì§œê¸°
+	//bfs íƒìƒ‰ì´ ëë‚˜ë©´ ë‹¤ìŒì¹¸ ì§„í–‰í•´ì•¼ í•˜ë‹ˆê¹Œ
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
 			if (!visited[i][j]) {
@@ -54,8 +54,8 @@ int unormal() {
 	bool visited[100][100] = { false, };
 
 	queue <pair<int, int>> q;
-	//for¹®À¸·Î ÀüÃ¼ Å½»ö ÁøÇàÇØ¾ß µÇ´Â ÄÚµå Â¥±â
-	//dfs Å½»öÀÌ ³¡³ª¸é ´ÙÀ½Ä­ ÁøÇàÇØ¾ß ÇÏ´Ï±î
+	//forë¬¸ìœ¼ë¡œ ì „ì²´ íƒìƒ‰ ì§„í–‰í•´ì•¼ ë˜ëŠ” ì½”ë“œ ì§œê¸°
+	//bfs íƒìƒ‰ì´ ëë‚˜ë©´ ë‹¤ìŒì¹¸ ì§„í–‰í•´ì•¼ í•˜ë‹ˆê¹Œ
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
 			if (!visited[i][j]) {
