@@ -12,7 +12,7 @@ for _ in range(E):
     graph[u].append((v, w))
 print("graph ", graph)
 def dijkstra(start):
-    q = []
+    q = [] # 우선순위 큐
     heapq.heappush(q, (0, start))
     sp[start] = 0
     while q:
@@ -24,7 +24,7 @@ def dijkstra(start):
             cost = sp[cur] + cw
             if cost < sp[cv]:
                 sp[cv] = cost
-                heapq.heappush(q, (cost, cv))
+                heapq.heappush(q, (cost, cv)) # cost를 기준으로 정렬
                 print("push: ", cv, cost)
 
 dijkstra(K)
