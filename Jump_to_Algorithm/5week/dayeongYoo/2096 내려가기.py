@@ -3,12 +3,28 @@ import sys
 input = sys.stdin.readline
 
 n = int(input())
-tmp = list(map(int, input().split()))
-dp1 = tmp
-dp2 = tmp
-for _ in range(n - 1):
+
+max_dp = [0] * 3
+min_dp = [0] * 3
+
+max_tmp = [0] * 3
+min_tmp = [0] * 3
+
+for i in range(n):
     a, b, c = map(int, input().split())
-    # dp배열에 append 하는 것이 아니라, 값을 갱신시켜준다.
-    dp1 = [a + max(dp1[0], dp1[1]), b + max(dp1), c + max(dp1[1], dp1[2])]
-    dp2 = [a + min(dp2[0], dp2[1]), b + min(dp2), c + min(dp2[1], dp2[2])]
-print(max(dp1), min(dp2))
+    for j in range(3):
+        if j == 0:  # 오른쪽
+            max_tmp[j] = a + max(max_dp[j], max_dp[j + 1])
+            min_tmp[j] = a + min(min_dp[j], min_dp[j + 1])
+        elif j == 1:  # 중간
+            max_tmp[j] = b + max(max_dp[j - 1], max_dp[j], max_dp[j + 1])
+            min_tmp[j] = b + min(min_dp[j - 1], min_dp[j], min_dp[j + 1])
+        else:  # 왼쪽
+            max_tmp[j] = c + max(max_dp[j], max_dp[j - 1])
+            min_tmp[j] = c + min(min_dp[j], min_dp[j - 1])
+
+    for j in range(3):  # 메모리 제한-> 슬라이딩 윈도우 기법 이용
+        max_dp[j] = max_tmp[j]
+        min_dp[j] = min_tmp[j]
+
+print(max(max_dp), min(min_dp))

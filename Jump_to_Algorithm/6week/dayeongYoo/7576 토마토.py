@@ -29,7 +29,7 @@ while q:
 
     nd = d + 1 # new day 갱신
 
-    for k in range(4): # 사방탐색
+    for k in range(4): # 사방탐경
         nx = x + dx[k]
         ny = y + dy[k]
         if in_range(nx, ny) and board[nx][ny] == 0:

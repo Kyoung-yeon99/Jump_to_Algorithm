@@ -1,20 +1,24 @@
-n = int(input())
+import sys
+
+n = int(sys.stdin.readline())
 # 배열 a
-a = list(map(int, input().split()))
+a = list(map(int, sys.stdin.readline().split()))
 # 배열 b
-b = list(map(int, input().split()))
+b = list(map(int, sys.stdin.readline().split()))
 
-
-for i in range(n):
-    max_idx = i #  가장 작은 값 저장
-    for j in range(n-1, 0, -1):
-        # 가장 작은 값이 다음 인덱스보다 클 때
-        if a[max_idx] < a[j]:
-            max_idx=j # 값 변경
-    # 두 요소 변경
-    a[i], a[max_idx]=a[max_idx], a[i]
-
+for i in range(n - 1, -1, -1):
     if a == b:
         print(1)
+        break
+    max_idx = i
 
-print(0)
+    for j in range(i - 1, -1, -1):  # range 범위 주의!!
+        if a[max_idx] < a[j]:  # 최댓값 찾기
+            max_idx = j
+
+    a[i], a[max_idx] = a[max_idx], a[i]
+
+
+
+else:
+    print(0)

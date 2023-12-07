@@ -1,4 +1,5 @@
 # n개의 숫자배열에서 m개의 숫자배열 속 숫자 여부 출력
+# 이분탐색의 정석
 
 n = int(input())
 a = list(map(int, input().split()))

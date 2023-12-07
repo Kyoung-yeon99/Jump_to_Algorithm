@@ -17,4 +17,5 @@ for i in range(1, l):
             dic[0] += 1  # 자기 +1
         else:
             dic[1] += 1  # 1 덩어리 +1
-print(min(dic.values()))
+
+print(min(dic.values())) # 최소로 뒤집는 횟수 출력
