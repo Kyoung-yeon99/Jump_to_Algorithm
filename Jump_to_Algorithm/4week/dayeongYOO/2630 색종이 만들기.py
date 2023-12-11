@@ -12,13 +12,12 @@ def dividePaper(x, y, n):
 
     for row in range(x, x + n):
         for col in range(y, y + n):
-            if color != paper[row][col]:
+            if color != paper[row][col]:  # 사각형 색깔과 다를 경우
                 dividePaper(x, y, n // 2)  # 1
                 dividePaper(x, y + n // 2, n // 2)  # 2
                 dividePaper(x + n // 2, y, n // 2)  # 3
                 dividePaper(x + n // 2, y + n // 2, n // 2)  # 4
                 return
-                # 모든 범위 내 같은 색종이라면
     if color == 0:
         ans[0] += 1  # 하얀색
     else:

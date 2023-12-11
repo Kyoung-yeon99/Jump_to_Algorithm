@@ -8,7 +8,7 @@ for i in range(n):  # 1st
         for k in range(j + 1, n):  # 3rd
             if cards[i] + cards[j] + cards[k] > m:
                 continue
-            else:
-                ans = max(ans, cards[i] + cards[j] + cards[k])
+            else:  # m보다 작거나 같을때
+                ans = max(ans, cards[i] + cards[j] + cards[k])  # 최대값 갱신
 
 print(ans)

@@ -41,7 +41,7 @@ def bfs(v):
 
         for nx in range(1, n + 1):
             # 방문하지 않았고, 인접행렬 값이 1이라면
-            if not visited[nx] and graph[nx][curr_v]:
+            if not visited[nx] and graph[nx][curr_v]: # 너비 우선 탐색이라 x 값을 변경
                 q.append(nx)
                 visited[nx] = True
 

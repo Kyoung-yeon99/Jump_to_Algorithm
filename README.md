@@ -46,9 +46,11 @@
 - https://www.acmicpc.net/group/workbook/view/19038/64045
 - 발표자: 선경(11/28)
 ## 9주차-탐색(이진/완전)
-발표자: 서연(12/5)
+- https://www.acmicpc.net/group/workbook/view/19038/64185
+- 발표자: 서연(12/5)
 ## 10주차-실전 문제 풀이-구현(1~4)
-발표자: 다영(12/12)
+- https://www.acmicpc.net/group/workbook/view/19038/64435
+- 발표자: 다영(12/12)
 ## 11주차-실전 문제 풀이-구현(5~9)
 발표자: 없음
 

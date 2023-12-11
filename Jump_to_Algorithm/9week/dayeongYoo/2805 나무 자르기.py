@@ -4,7 +4,7 @@ left, right = 0, max(trees)  # 높이 0 가능
 
 while left <= right:
     mid = (left + right) // 2
-    total = 0
+    total = 0 # 정답
     for tree in trees:
         if tree >= mid:  # 중간값 보다 나무 길이가 더 길다면
             total += tree - mid
