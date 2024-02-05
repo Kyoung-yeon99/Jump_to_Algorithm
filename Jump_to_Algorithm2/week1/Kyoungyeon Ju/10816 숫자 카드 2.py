@@ -41,4 +41,8 @@ find = list(map(int,input().split()))
 
 for num in find :
     print(num_list[num], end=" ") 
+
+# 3.defaultdict(int)
+0인 숫자 따로 처리안해도 가능
+
 """
