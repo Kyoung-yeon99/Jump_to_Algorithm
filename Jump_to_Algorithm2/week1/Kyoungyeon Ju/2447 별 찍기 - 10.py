@@ -3,7 +3,7 @@ star = [[" " for _ in range(N)] for _ in range(N)]
 
 
 def draw_star(x, y, n):
-    print("x=",x,"y=",y,"n=",n)
+    # print("x=", x, "y=", y, "n=", n)
     if n == 1:
         star[x][y] = "*"
         return
