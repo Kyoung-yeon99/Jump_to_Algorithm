@@ -10,7 +10,7 @@ int main() {
 	cin >> a1 >> a2 >> a3;
 
 	if (a1 + a2 + a3 == 180) {
-		//if, else if ¼ø¼­°¡ ¹Ù²î¸é ¾ÈµÊ
+		//if, else if ìˆœì„œ ë°”ë€Œë©´ ì•ˆë¨
 		if (a1 == 60 && a2 == 60 && a3 == 60)
 			cout << "Equilateral";
 		else if (a1 == a2 || a1 == a3 || a2 == a3)
