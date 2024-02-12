@@ -1,11 +1,11 @@
 dr = [-1, 0, 1, 0]
 dc = [0, 1, 0, -1]  # 북 동 남 서
 
-n, m = map(int, input().split())
-r, c, d = map(int, input().split())
+n, m = map(int, input().split())  # 방 크기
+r, c, d = map(int, input().split())  # 처음 위치, 바라보는 방향
 room = [list(map(int, input().split())) for _ in range(n)]
 
-room[r][c] = -1  # -1은 청소 끝난
+room[r][c] = -1  # -1 청소 끝난 상태
 cnt = 1
 while room[r][c] != 1:  # 벽이 아니라면
     flag = False
