@@ -4,7 +4,7 @@ import heapq
 
 input = sys.stdin.readline
 N, T = 0, 0 # 동굴의 크기, 테스트 케이스 번호
-rupee, visited, loss = [], [], [] # 루피의 크기, 방문 여부, 최소 피해 금액
+rupee, loss = [], [] # 루피의 크기, 방문 여부, 최소 피해 금액
 ad = [] # 인접 리스트
 dr = [1, 0, -1, 0]
 dc = [0, 1, 0, -1]
@@ -16,7 +16,7 @@ def dijkstra():
 
     while q:
         l, p = heapq.heappop(q) # 탐색할 칸과 루피의 크기
-        if loss[p[0]][p[1]] < l:
+        if loss[p[0]][p[1]] > l: # 이전에 기록한 최소 피해 금액보다 클 경우 해당 경로는 탐색 중지
             continue
         for r, c in ad[p[0]][p[1]]:
             if l + rupee[r][c] < loss[r][c]:
@@ -31,8 +31,7 @@ while True:
     T += 1 # t번째 테스트 케이스
     ad = [[[] for _ in range(N)] for _ in range(N)]
     rupee = [] # 각 칸에 존재하는 루피 정보
-    visited = [[False for _ in range(N)] for _ in range(N)]
-    loss = [[10 * N * N for _ in range(N)] for _ in range(N)]
+    loss = [[10 * N * N for _ in range(N)] for _ in range(N)] # 해당 칸까지 이동했을 때 최소 피해 금액
     for _ in range(N):
         rupee.append(list(map(int, input().split())))
 
