@@ -1,5 +1,5 @@
-//CCW ¾Ë°í¸®Áò
-//Âü°í) https://snowfleur.tistory.com/98
+//CCW ì•Œê³ ë¦¬ì¦˜
+//ì°¸ê³ ) https://snowfleur.tistory.com/98
 #include <bits/stdc++.h>
 using namespace std;
 
