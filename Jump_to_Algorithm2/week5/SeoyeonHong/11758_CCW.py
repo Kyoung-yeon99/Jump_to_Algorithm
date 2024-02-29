@@ -11,19 +11,3 @@ elif ccw < 0:
     print(-1)
 else:
     print(0)
-
-
-# https://snowfleur.tistory.com/98
-
-# if x1 == x2: # 수직선일 경우
-#     if x3 == x1:
-#         print(0)
-# elif y1 == y2: # 수평선일 경우
-#     if y3 == y1:
-#         print(0)
-# else:
-#     a = (y2 - y1) / (x2 - x1) # 기울기
-#     y = a * (x3 - x1) + y1 # 일직선일 경우 x가 x3일 때 y의 값
-#     if y3 == y:
-#         print(0)
-    
