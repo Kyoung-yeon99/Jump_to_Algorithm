@@ -1,5 +1,5 @@
 /*
-Âü°íÇÑ Ç®ÀÌ : https://kimjingo.tistory.com/114
+ì°¸ê³ í•œ í’€ì´ : https://kimjingo.tistory.com/114
 */
 #include <bits/stdc++.h>
 using namespace std;
