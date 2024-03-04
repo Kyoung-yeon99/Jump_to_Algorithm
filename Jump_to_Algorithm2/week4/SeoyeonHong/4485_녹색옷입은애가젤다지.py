@@ -6,8 +6,6 @@ input = sys.stdin.readline
 N, T = 0, 0 # 동굴의 크기, 테스트 케이스 번호
 rupee, loss = [], [] # 루피의 크기, 방문 여부, 최소 피해 금액
 ad = [] # 인접 리스트
-dr = [1, 0, -1, 0]
-dc = [0, 1, 0, -1]
 
 def dijkstra():
     loss[0][0] = rupee[0][0]
