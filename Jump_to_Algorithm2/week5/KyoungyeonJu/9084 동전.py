@@ -1,7 +1,7 @@
 tc = int(input())
 for _ in range(tc):
 	n = int(input())  # 동전 가지 수 1 ≤ N ≤ 20
-	coins = list(map(int, input().split())) # 정수로서 1원부터 10000원
+	coins = list(map(int, input().split()))  # 정수로서 1원부터 10000원
 	m = int(input())  # 만들어야 할 금액 1 ≤ M ≤ 10000
 	dp = [0]*(m+1)
 	dp[0] = 1
