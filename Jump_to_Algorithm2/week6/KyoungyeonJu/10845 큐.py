@@ -9,7 +9,7 @@ for _ in range(n):
     if c[0] == 'push':
         q.append(c[1])
     elif c[0] == 'pop':
-        if len(q) == 0:
+        if len(q) == 0:  # 비어있는지 확인
             print(-1)
         else:
             print(q.popleft())
@@ -21,19 +21,19 @@ for _ in range(n):
         else:
             print(0)
     elif c[0] == 'front':
-        if len(q) == 0:
+        if len(q) == 0:  # 비어있는지 확인
             print(-1)
         else:
-            f = q.popleft()
-            print(f)
-            q.appendleft(f)
+            f = q.popleft()  # 빼고
+            print(f)  # 출력하고
+            q.appendleft(f)  # 다시 넣고
     elif c[0] == 'back':
-        if len(q) == 0:
+        if len(q) == 0:  # 비어있는지 확인
             print(-1)
         else:
-            b = q.pop()
-            print(b)
-            q.append(b)
+            b = q.pop()  # 빼고
+            print(b)  # 출력하고
+            q.append(b)  # 다시 넣고
 
 
 
