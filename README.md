@@ -76,9 +76,8 @@
 <div markdown="1">       
 
 ## 백준 그룹 기능 활용한 문제풀이
-😎 링크 😎
-https://www.acmicpc.net/group/workbook/19038
-
+😎 문제 목록 😎
+https://docs.google.com/spreadsheets/u/2/d/1x3ZO0CPweGftiMxOhNXnLZIpnGkie4KqDpCEVbS7Ko0/edit?usp=sharing
 
 </div>
 </details>
