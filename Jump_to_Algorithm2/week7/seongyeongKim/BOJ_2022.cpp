@@ -1,5 +1,5 @@
 /*
-* Âü°íÇÑ Ç®ÀÌ : https://codecollector.tistory.com/751
+* ì°¸ê³ í•œ í’€ì´ : https://codecollector.tistory.com/751
 */
 #include <bits/stdc++.h>
 using namespace std;
