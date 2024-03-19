@@ -1,18 +1,20 @@
-# Jump_to_Algorithm
+# ✏️ Jump_to_Algorithm
+![9B30FBFD-3490-4CCD-8553-A32AC219D5F3](https://github.com/allzeroyou/Jump_to_Algorithm/assets/71822139/c8f90d0b-8900-40a7-aef4-5f6ba95a0223)
+
 덕성여대 취업스터디 IT반 알고리즘 스터디(23.09.26~ing)
 
-## 목표
+## 🌱 목표
 공채 코테를 뿌시고 싶다.
 
-## 운영방식
+## 📝 운영방식
 - 매주 최소 6~7문제를 풀고, 그 중 한 문제를 선택하여 각자 코드와 풀이 방식을 설명하고 질의응답.
 - **push는 매주 월요일 23:59 까지**
 - 매주 화요일 구글 미트 스터디때 매주 발표자가 알고리즘 이론을 설명하고 예시 코드를 보면서 공부.
 
-## 스터디 규칙
+## 📙 스터디 규칙
 - 구글링 해도 되니까 포기하지 말고 풀어보기
 
-## 패널티
+## 📕 패널티
 1. 일주일 기한 내에 못 올렸을 경우,
 2. 벌금
    -  1개 2000원
@@ -71,13 +73,7 @@
 </div>
 </details>
 
-<details>
-<summary>ing</summary>
-<div markdown="1">       
-
-## 백준 그룹 기능 활용한 문제풀이
+# ✨ ~ing
+## 💻 백준 그룹 기능 활용한 문제풀이
 😎 문제 목록 😎
 https://docs.google.com/spreadsheets/u/2/d/1x3ZO0CPweGftiMxOhNXnLZIpnGkie4KqDpCEVbS7Ko0/edit?usp=sharing
-
-</div>
-</details>
