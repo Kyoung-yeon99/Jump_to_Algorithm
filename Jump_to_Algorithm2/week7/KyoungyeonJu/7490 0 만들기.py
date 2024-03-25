@@ -16,3 +16,5 @@ for _ in range(tc):
             print(string)
 
     print()  # 각 테스트 케이스의 결과를 한 줄 띄워 구분
+
+
