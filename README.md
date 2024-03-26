@@ -75,5 +75,8 @@
 
 # ✨ ~ing
 ## 💻 백준 그룹 기능 활용한 문제풀이
-😎 문제 목록 😎
-https://docs.google.com/spreadsheets/u/2/d/1x3ZO0CPweGftiMxOhNXnLZIpnGkie4KqDpCEVbS7Ko0/edit?usp=sharing
+😎 문제 선정 기준 😎
+- 백준 문제 중 맞힌 사람 최소 10000명 이상인 문제 선정
+- 다양한 문제 유형으로 선정(실버 3이상)
+- 일주일에 5문제!
+- https://docs.google.com/spreadsheets/u/2/d/1x3ZO0CPweGftiMxOhNXnLZIpnGkie4KqDpCEVbS7Ko0/edit?usp=sharing
