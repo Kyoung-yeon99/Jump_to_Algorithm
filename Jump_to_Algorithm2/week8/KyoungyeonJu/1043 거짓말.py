@@ -17,7 +17,7 @@ if true[0] != 0:  # 진실을 아는 사람이 있는 경우
             if party & true_num:  # 교집합이 있다면
                 true_num = true_num.union(party)  # true_num은 합집합
 
-# print(true_num)
+print("진실을 아는 사람들", true_num)
 for i in range(m):
     if true_num & parties[i]:
         ans[i] = True
