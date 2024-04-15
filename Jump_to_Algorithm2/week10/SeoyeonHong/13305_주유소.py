@@ -25,6 +25,5 @@ def move(index, total_cost): # 이동
             move(index+i, total_cost)
             break
             
-
 move(0, 0)
 print(min_cost)

@@ -5,14 +5,14 @@ import sys
 input = sys.stdin.readline
 V, E = map(int, input().split()) # 정점의 개수, 간선의 개수
 parent = [0] * (V + 1)
-edges = [] # 인접리스트
+edges = []
 weights = 0
 
 for _ in range(E):
     A, B, C = map(int, input().split()) # C: 간선의 가중치, 음수 가능
     edges.append((C, A, B))
 
-edges.sort()
+edges.sort() # 가중치 합의 최소를 구하기 위해 오름차순 정렬
 
 # 부모를 자기 자신으로 초기화
 for i in range(1, V+1):
