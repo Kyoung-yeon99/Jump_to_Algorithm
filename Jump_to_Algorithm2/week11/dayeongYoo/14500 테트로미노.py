@@ -1,68 +1,55 @@
 # https://cijbest.tistory.com/m/87
+# https://www.acmicpc.net/source/77026865
 
-import sys
+# 종이 세로, 가로
+n, m = map(int, input().split())
+# 2차원 배열: 종이 맵
+board = [list(map(int, input().split())) for _ in range(n)]
 
-input = sys.stdin.readline
+# 2차원 배열: visited
+visited = [[False] * m for _ in range(n)]
 
-# 상, 하, 좌, 우
-move = [(0, 1), (0, -1), (1, 0), (-1, 0)]
+# 방향 벡터
+dx = [-1, 1, 0, 0]
+dy = [0, 0, -1, 1]
 
-# INPUT
-N, M = map(int, input().split())
-board = [list(map(int, input().split())) for _ in range(N)]
-visited = [[False] * M for _ in range(N)]
-
-# 최대값 변수
-maxValue = 0
+# 최댓값 저장 변수
+max_val = 0
 
 
-# dfs로 만들수 없는 모양을 제외한 모양들 최대값 계산
-def dfs(i, j, dsum, cnt):
-    global maxValue
-    # 모양 완성되었을 때 최대값 계산
+# dfs 함수
+def sol(x, y, d_sum, cnt):
+    global max_val
+
+    # 테트로미노 도형 개수 최대 4개가 완성되면
     if cnt == 4:
-        maxValue = max(maxValue, dsum)
-        return
+        max_val = max(max_val, d_sum)
+        return max_val
 
-    # 상, 하, 좌, 우로 이동
-    for n in range(4):
-        ni = i + move[n][0]
-        nj = j + move[n][1]
-        if 0 <= ni < N and 0 <= nj < M and not visited[ni][nj]:
-            # 방문 표시 및 제거
-            visited[ni][nj] = True
-            dfs(ni, nj, dsum + board[ni][nj], cnt + 1)
-            visited[ni][nj] = False
+    # 도형 4개 완성 안 되었다면 dfs 수행
+    for i in range(4):
+        nx = x + dx[i]
+        ny = y + dy[i]
+        # 범위 체크할때 n, m
+        if 0 <= nx < n and 0 <= ny < m and not visited[nx][ny]:
+            visited[nx][ny] = True
 
+            # 보라색 테트로미노(ㅗ)를 만들기 위해 2번째 칸에서 탐색 한번 더 진행
+            if cnt == 2:
+                sol(x, y, d_sum + board[nx][ny], cnt + 1)
+                # 탐색후 방문 취소(원상복귀)
+                visited[nx][ny] = False
 
-# ㅗ, ㅜ, ㅓ, ㅏ 모양의 최대값 계산
-def shape(i, j):
-    global maxValue
-    for n in range(4):
-        # 초기값은 시작지점의 값으로 지정
-        tmp = board[i][j]
-        for k in range(3):
-            # move 배열의 요소를 3개씩 사용할 수 있도록 인덱스 계산
-            # 012, 123, 230, 301
-            t = (n + k) % 4
-            ni = i + move[t][0]
-            nj = j + move[t][1]
-
-            if not (0 <= ni < N and 0 <= nj < M):
-                tmp = 0
-                break
-            tmp += board[ni][nj]
-        # 최대값 계산
-        maxValue = max(maxValue, tmp)
+            sol(nx, ny, d_sum + board[nx][ny], cnt + 1)
+            # 세로로 긴 작대기(ㅣ) 모양을 순회 안하는데...?
+            print(f"i: {nx}, j: {ny}, board[i][j]: {board[nx][ny]},d_sum: {d_sum + board[nx][ny]} ")
+            visited[nx][ny] = False
 
 
-for i in range(N):
-    for j in range(M):
-        # 시작점 visited 표시
+# 함수 실행
+for i in range(n):
+    for j in range(m):
         visited[i][j] = True
-        dfs(i, j, board[i][j], 1)
+        sol(i, j, board[i][j], 1)
         visited[i][j] = False
-
-        shape(i, j)
-
-print(maxValue)
+print(max_val)
