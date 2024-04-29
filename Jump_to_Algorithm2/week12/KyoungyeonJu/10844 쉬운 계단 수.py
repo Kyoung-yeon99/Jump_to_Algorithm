@@ -9,4 +9,4 @@ for i in range(2, n+1):
         dp[i][j] = (dp[i-1][j-1]+dp[i-1][j+1]) % num
     dp[i][9] = dp[i-1][8] % num
 
-print(sum[dp[n]] % num)
+print(sum(dp[n]) % num)
