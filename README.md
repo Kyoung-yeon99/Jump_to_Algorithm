@@ -7,7 +7,7 @@
 공채 코테를 뿌시고 싶다.
 
 ## 📝 운영방식
-- 매주 최소 6~7문제를 풀고, 그 중 한 문제를 선택하여 각자 코드와 풀이 방식을 설명하고 질의응답.
+- 매주 5문제를 풀고, 그 중 한 문제를 선택하여 각자 코드와 풀이 방식을 설명하고 질의응답.
 - **push는 매주 월요일 23:59 까지**
 - 매주 화요일 구글 미트 스터디때 매주 발표자가 알고리즘 이론을 설명하고 예시 코드를 보면서 공부.
 
@@ -80,3 +80,7 @@
 - 다양한 문제 유형으로 선정(실버 3이상)
 - 일주일에 5문제!
 - https://docs.google.com/spreadsheets/u/2/d/1x3ZO0CPweGftiMxOhNXnLZIpnGkie4KqDpCEVbS7Ko0/edit?usp=sharing
+
+- **sovled.ac** 문제 큐레이션
+<img width="1299" alt="image" src="https://github.com/allzeroyou/Jump_to_Algorithm/assets/71822139/8831a4d1-ab04-47b1-bb2a-4a5dc12532e8">
+
