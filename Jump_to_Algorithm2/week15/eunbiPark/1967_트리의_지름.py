@@ -27,5 +27,6 @@ def bfs(start):
     m = max(visited)
     return [visited.index(m), m]
 
-
+# 시작점에서 임의의 점 까지 가장 긴 거리를 구함
+# 가장 먼 거리를 시작점으로 해서 다시 가장 긴 거리를 구함
 print(bfs(bfs(1)[0])[1])
