@@ -1,14 +1,4 @@
 def solution(players, callings):
-    players = ["mumu", "soe", "poe", "kai", "mine"]
-    idx = players.index("kai")
-    players.remove("kai")
-    players.insert(idx, "kai")
-    print(players)
-    answer = []
-    return answer
-
-
-
 
 """
 5 ≤ players의 길이 ≤ 50,000
