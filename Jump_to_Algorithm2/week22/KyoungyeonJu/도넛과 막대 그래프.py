@@ -13,23 +13,25 @@ def solution(edges):
 
     for s, e in edges:
         d[s].append(e)
+    print(d)
 
     for node, nodes in d.items():
         for n in nodes:
             out_in[node][0] += 1
             out_in[n][1] += 1
+    print(out_in)
 
     for node, degrees in out_in.items():
         outd, ind = degrees
-        #print(f'node = {node} outd = {outd} ind = {ind}')
+        print(f'node = {node} outd = {outd} ind = {ind}')
 
         if outd == 0:
             answer[bar] += 1
-            #print(f'outd==0 node = {node} {answer}')
+            print(f'outd==0 node = {node} {answer}')
         elif outd == 2:
             if ind > 0:
                 answer[eight] += 1
-                #print(f'outd==2 node = {node} ind = {ind} {answer}')
+                print(f'outd==2 node = {node} ind = {ind} {answer}')
             else:
                 answer[start] = node
                 root = node
@@ -39,5 +41,13 @@ def solution(edges):
             #print(f'outd>2 node = {node} {answer} {root}')
 
     answer[donut] = out_in[root][0] - answer[bar] - answer[eight]
-
+    print(answer)
     return answer
+
+
+tcs = [
+    [[2, 3], [4, 3], [1, 1], [2, 1]],
+    [[4, 11], [1, 12], [8, 3], [12, 7], [4, 2], [7, 11], [4, 8], [9, 6], [10, 11], [6, 10], [3, 5], [11, 1], [5, 3], [11, 9], [3, 8]]
+    ]
+
+solution(tcs[1])
