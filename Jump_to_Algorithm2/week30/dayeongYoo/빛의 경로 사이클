@@ -1,0 +1,61 @@
+// 격자의 각 셀에서 4개의 방향(상, 하, 좌, 우)으로 빛을 쏘는 모든 경우를 고려
+// 각 경우에 대해 빛의 경로를 추적하고 사이클을 찾기
+// 이미 방문한 경로는 다시 방문하지 않도록
+// 찾은 사이클의 길이를 저장하고 정렬
+
+import java.util.*;
+
+class Solution {
+    int R,C; // 행, 열
+    char[][] map; // 격자 저장 2차원 배열
+    boolean[][][] visited; // 각 칸의 각 방향 방문 여부를 저장할 3차원 배열
+    // 시계방향
+    int[] dx = {-1, 0, 1,0};
+    int[] dy = {0, 1, 0,-1};
+
+    public int[] solution(String[] grid) {
+        R = grid.length;
+        C = grid[0].length();
+        map = new char[R][C];
+        visited = new boolean[R][C][4]; // 각 칸마다 4개 방향에 대한 방문정보 저장
+        //grid -> char 2차원배열로 변환
+        for(int i =0; i<R; i++){
+            map[i]=grid[i].toCharArray();
+        }
+        List<Integer>cycles = new ArrayList<>(); // 사이클길이 저장
+        // 모든 칸, 모든 방향에 대해 사이클 검사
+        for(int i=0; i<R; i++){
+            for(int j=0; j<C; j++){
+                for(int d=0; d<4; d++){
+                    if(!visited[i][j][d]){
+                        int cycleLeg = findCycle(i,j,d);
+                        if(cycleLeg>0){
+                            cycles.add(cycleLeg);
+                        }
+                    }
+                }
+            }
+        }
+        Collections.sort(cycles); // 정렬
+        return cycles.stream().mapToInt(i->i).toArray(); // List를 int 배열로 변환하여 반환
+    }
+    private int findCycle(int x, int y, int d) {
+        int length = 0;
+
+        while(!visited[x][y][d]) {
+            visited[x][y][d] = true; // 현재 위치와 방향을 방문했다고 표시
+            length++; // 사이클 길이 증가
+
+            // 현재 칸의 문자에 따라 방향 변경
+            if(map[x][y] == 'L') d = (d - 1 + 4) % 4; // 좌회전
+            else if(map[x][y] == 'R') d = (d + 1) % 4; // 우회전
+            // 'S'인 경우 방향 변경 없음
+
+            // 다음 위치로 이동. 격자를 벗어나면 반대편으로 이동
+            x = (x + dx[d] + R) % R;
+            y = (y + dy[d] + C) % C;
+        }
+
+        return length; // 발견된 사이클의 길이 반환
+    }
+}
