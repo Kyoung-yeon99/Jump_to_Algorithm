@@ -1,8 +1,6 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/49994
 
 # 처음 걸어본 길의 길이
-from collections import defaultdict
-
 def solution(dirs):
     answer = 0
     R, C = 11, 11
