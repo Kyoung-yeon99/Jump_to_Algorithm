@@ -1,12 +1,9 @@
 # 가격이 떨어지지 않은 기간
-from collections import deque
-
 def solution(prices):
     answer = []
-    q = deque(prices)
-    
+
     for i in range(len(prices)):
-        p = q.popleft()
+        p = prices[i]
         t = 0 # 가격이 떨어지지 않은 기간
         
         for j in range(i+1, len(prices)):
