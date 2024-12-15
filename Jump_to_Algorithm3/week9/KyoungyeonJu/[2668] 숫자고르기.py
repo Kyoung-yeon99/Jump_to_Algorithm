@@ -8,12 +8,10 @@ def dfs(v):
         visited[v] = True
         first.add(v)
         second.add(graph[v][0])
-        print("dfs first", first, "second", second)
         if first == second:
             answer.update(list(first))
             return
         dfs(graph[v][0])
-
 
 
 n = int(input())
@@ -26,7 +24,6 @@ for i in range(1, n+1):
     visited = [False] * (n + 1)
     first, second = set(), set()
     dfs(i)
-    print("return answer", answer, "first", first, "second", second)
 
 answer = sorted(answer)
 print(len(answer))

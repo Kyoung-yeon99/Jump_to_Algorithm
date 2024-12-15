@@ -11,6 +11,7 @@ for i in range(1, N+1):
     graph[int(input())].append(i)
 
 def check_cycle(node, route):
+    print("node", node, "route", route)
     visited[node] = True
     route.append(node)
     for v in graph[node]: # 이어지는 노드에 대해서
@@ -18,6 +19,7 @@ def check_cycle(node, route):
             check_cycle(v, route.copy())
         else: # 사이클을 이룰 경우
             answer.extend(route) # 정수 뽑기
+            print("cycle answer", answer, "route", route)
             return
             
 for i in range(1, N+1):
