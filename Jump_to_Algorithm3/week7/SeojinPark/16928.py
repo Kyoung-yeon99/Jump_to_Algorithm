@@ -30,7 +30,5 @@ def bfs(start):
                     visited[next] = True
                     board[next] = board[v]+1
 
-
-
 bfs(1)
 print(board[100])
