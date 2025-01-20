@@ -1,22 +1,33 @@
-word = list(input())
-remove = list(input())
+#이분탐색 - 인접한 두 공유기 사이의 최대 거리 -> 찾고자 하는 이진탐색 값 -> 공유기 수 = C
+from sys import stdin
 
-stack = []
-i = 0
+N, C = map(int, stdin.readline().rstrip().split())
+arr = []
+for _ in range(N):
+    arr.append(int(stdin.readline().rstrip()))
 
-while i < len(word): #문자 한바퀴 돌면서 폭발 탐색
-    #문차 추가하면서 맨 뒤애들이랑 제거할 문자 비교
-    stack.append(word[i])
-    if stack[-len(remove):] == remove:#폭발
-        for _ in range(len(remove)):#지울 문자열 개수만큼 pop
-            stack.pop()
-    i+=1
+#정렬하기
+arr.sort()
 
-word = ''.join(list(stack))
+def bin_search(arr, C, start, end):
 
+    if start > end:
+        return end
 
-if word:
-    print(word)
-else:
-    print("FRULA")
+    mid = (start + end) // 2
+    cnt = 1 #공유기 수
+    last = arr[0] #마지막으로 탐색한 집 위치
 
+    for h in arr:
+        if h - last >= mid: #다음 집과의 거리가 mid 보다 크면
+            cnt+=1 #공유기 설치하기
+            last = h #마지막으로 탐색한 집 위치 업뎃
+            if cnt == C: #공유기 개수 C개면 break
+                break
+
+    if cnt >= C:
+        return bin_search(arr, C, mid+1, end)
+    else:
+        return bin_search(arr, C, start, mid -1)
+
+print(bin_search(arr, C, 1, arr[-1] - arr[0]))
